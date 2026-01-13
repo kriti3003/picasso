@@ -1,1 +1,227 @@
-# picasso
+
+## 🎨 Picasso – AI-Powered Video & Image Generation Platform
+
+Picasso is a modern, full-stack platform for AI-powered **video and image generation**, built with **FastAPI (Python)** on the backend and **React (TypeScript)** on the frontend.  
+It is designed with **clean architecture principles**, performance optimization, and scalability at its core.
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+Ensure you have the following installed:
+- Python **3.9+**
+- Node.js **16+**
+- Redis
+- Firebase account
+- Google Cloud Platform account
+
+---
+
+## ⚙️ Installation & Setup
+
+### Backend Setup (FastAPI)
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn src.main:app --reload
+````
+
+The API will be available at:
+
+* **Swagger UI:** `http://localhost:8000/docs`
+* **ReDoc:** `http://localhost:8000/redoc`
+
+---
+
+### Frontend Setup (React + TypeScript)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend will start at:
+
+* `http://localhost:5173` (default Vite port)
+
+---
+
+## ✨ Features
+
+* **AI Video Generation**
+
+  * Powered by Google Veo3 and other generative models
+* **AI Image Generation**
+
+  * Supports multiple image generation models
+* **Real-time Updates**
+
+  * WebSocket-based live status updates during generation
+* **Authentication & Authorization**
+
+  * Firebase Authentication
+  * Role-based access control (User / Admin)
+* **Admin Dashboard**
+
+  * Content moderation
+  * User management
+* **High Performance**
+
+  * Redis caching
+  * Optimized database queries
+* **Type-Safe Frontend**
+
+  * Fully typed React + TypeScript codebase
+
+---
+
+## 🏗️ Architecture Overview
+
+### Backend (Python / FastAPI)
+
+* Clean, layered architecture
+* Abstract base classes for shared logic
+* Centralized services:
+
+  * Authentication
+  * Caching
+  * Error handling
+* Firestore for document-based storage
+* Redis for caching and performance optimization
+
+---
+
+### Frontend (React / TypeScript)
+
+* Reusable, modular component architecture
+* Centralized API client with error handling
+* Strong TypeScript typing across the app
+* State management using **React Query (TanStack Query)**
+* Automatic caching and background revalidation
+* Tree-shakable exports and minimal dependencies
+* **75% code reduction** after cleanup (Oct 9, 2025)
+
+---
+
+## 📚 Documentation
+
+### Core Docs
+
+* **Architecture Guide:** `ARCHITECTURE.md`
+  Detailed explanation of backend & frontend design
+* **Project Structure:** `project_structure.md`
+  Complete folder breakdown
+* **API Docs:**
+  Auto-generated FastAPI docs available at `/docs`
+
+---
+
+### React Query Optimization (Oct 9, 2025) 🆕
+
+* **OPTIMIZATION_COMPLETE.md**
+  Summary of refactor (75% code reduction)
+* **REACT_QUERY_CLEANUP_REPORT.md**
+  Removed **5,428 lines** of redundant code
+* **TREE_SHAKING_GUIDE.md**
+  How tree-shaking works and how to verify it
+* **STRUCTURE_SUMMARY.md**
+  Final clean structure (15 files instead of 33)
+
+---
+
+## 🧪 Testing
+
+### Backend Tests
+
+```bash
+cd backend
+pytest tests/
+pytest tests/performance/ -m performance
+```
+
+---
+
+### Frontend Tests
+
+```bash
+cd frontend
+npm test
+npm run type-check
+```
+
+---
+
+## 🔐 Security
+
+* Firebase-based JWT authentication
+* Role-based authorization (User / Admin)
+* Input validation and sanitization
+* CORS protection
+* Secure file upload handling
+
+---
+
+## 📊 Performance Metrics
+
+* **Code Duplication:** < 1.5% (down from 8%)
+* **API Response Time:**
+
+  * < 2s (standard requests)
+  * < 5s (concurrent requests)
+* **Caching:** Redis with intelligent invalidation
+* **Database:** Optimized Firestore queries with pagination
+
+---
+
+## 🚀 Deployment
+
+### Production Stack
+
+* **Backend:** Google Cloud Run
+* **Frontend:** Vercel / Netlify
+* **Database:** Google Firestore
+* **Storage:** Google Cloud Storage
+* **Cache:** Redis Cloud / Google Memorystore
+
+---
+
+### Environment Variables
+
+All required environment variables are documented here:
+
+* Backend: `backend/.env.example`
+* Frontend: `frontend/.env.example`
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a new feature branch
+3. Follow existing architecture and inheritance patterns
+4. Add tests for new functionality
+5. Ensure SonarQube checks pass
+6. Submit a pull request with a clear description
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License**.
+See the `LICENSE` file for details.
+
+---
+
+## 🆘 Support
+
+If you need help:
+
+* Refer to the **Architecture Guide**
+* Check existing GitHub issues
+* Open a new issue with clear reproduction steps
+
+---
+
+```
